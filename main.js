@@ -19,7 +19,7 @@ if (arrayCodigos.length > 0) {
 
 btnAdd.onclick = function () {
     add(url.value);
-    updateTable(arrayCodigos);
+    // updateTable(arrayCodigos);
     url.value = '';
 
 };
@@ -30,8 +30,18 @@ btnAdd.onclick = function () {
 function add(url) {
     arrayUrl = url.split('=');
     arrayUrl = arrayUrl[1].split('&');
-    console.log(arrayUrl[0]);
-    arrayCodigos.push(arrayUrl[0]);
+    
+    if (existe(arrayUrl[0]) < 0) {
+        arrayCodigos.push(arrayUrl[0]);
+        updateTable(arrayCodigos);
+    } else {
+        alert('El codigo ' + arrayUrl[0] + ' ya existe.')
+    }
+}
+
+function existe(code) {
+    console.log(arrayCodigos.indexOf(code));
+    return arrayCodigos.indexOf(code);
 }
 
 function updateTable() {

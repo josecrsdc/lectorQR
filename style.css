@@ -1,0 +1,10 @@
+.body {
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.body > h1 {
+    text-align: center;
+    color: rgb(54, 54, 54);
+}
