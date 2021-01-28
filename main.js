@@ -20,6 +20,8 @@ if (arrayCodigos.length > 0) {
 btnAdd.onclick = function () {
     add(url.value);
     updateTable(arrayCodigos);
+    url.value = '';
+
 };
 
 
