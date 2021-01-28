@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector QR </title>
+</head>
+<body>
+    <h1>Lector QR agencia tributaria</h1>
+    <p>Inserta URL</p>
+    
+        <input type="text" name="formUrl" id="url">
+        <button id="btnAdd">Añadir codigo</button>
+    
+
+    <h3>Lista de productos escaneados</h3>
+
+    <table id="table">
+        
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+        <button onclick="exportTableToCSV('members.csv')">Export HTML Table To CSV File</button>
+    </body>
+
+    <script src="./main.js"></script>
+</html>
